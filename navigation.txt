@@ -1,0 +1,39 @@
+navigation:
+UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"secondStoryBoard" bundle:nil];
+
+// Load the initial view controller from the storyboard.
+// Set this by selecting 'Is Initial View Controller' on the appropriate view controller in the storyboard.
+UIViewController *theInitialViewController = [secondStoryBoard instantiateInitialViewController];
+
+
+***********
+
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Rules" bundle:nil];
+    RulesViewController *ctrl = [storyboard instantiateViewControllerWithIdentifier:@"RulesViewController"];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:ctrl];
+    [self presentModalViewController:nav animated:NO];
+    
+    
+    
+//    RulesViewController *obj =[[RulesViewController alloc]initWithNibName:@"RulesViewController" bundle:nil];
+//    [self.navigationController pushViewController:obj animated:YES];
+
+
+
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Rules" bundle:nil];
+//    RulesViewController *rulesCtrl = (RulesViewController *) [storyboard instantiateViewControllerWithIdentifier:@"RulesViewController"];
+////    ctrl.delegate = self;
+//    
+//    UINavigationController *nctrl = [[UINavigationController alloc] initWithRootViewController:rulesCtrl];
+//    [self presentViewController:nctrl animated:YES completion:nil];
+
+
+**********
+
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Rules" bundle:nil];
+    UIViewController *mainView = [storyboard instantiateViewControllerWithIdentifier:@"RulesViewController"];
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:mainView];
+    [self presentViewController:navCtrl animated:YES completion:nil];
